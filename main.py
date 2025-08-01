@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/ecpay_callback', methods=['POST'])
+@app.route('/payment/notify', methods=['POST'])
 def ecpay_callback():
     data = request.form.to_dict()
     print("ECPay callback received:", data)
